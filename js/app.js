@@ -34,3 +34,23 @@ function skillsEffect() {
 
     skills_progress_bars.forEach(skill => skill.style.width = skill.dataset.progress);
 }
+
+function navBar() {
+    var el = document.getElementById("links");
+    if (el.style.height == "0px") {
+        el.style.height = "200px";
+    } else {
+        el.style.height = "0px";
+    }
+
+}
+
+window.addEventListener('resize', () => {
+    var newWidth = window.innerWidth;
+    var el = document.getElementById("links");
+    if (newWidth >= 850) {
+
+        el.style.height = "200px";
+
+    }
+})
